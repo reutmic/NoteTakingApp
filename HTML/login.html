@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Login</title>
+    <script type="module" src="../JS/login.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div id="loginSection">
+        <div class="row">
+            <h1 class="text-center text-primary mb-3 mt-2">Login</h1>
+            <h5 class="text-center text-warning mb-3">Enter your email address and password to login</h5>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-4"></div>
+            <div class="col-sm-8 col-xs-10">
+                <form id="loginForm">
+                    <div class="mb-3 row">
+                        <div class="col-6">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="col-6">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Login</button>
+                </form>
+            </div>
+            <div class="col-xs-1 col-sm-4"></div>
+        </div>
+        <div class="row mt-4 mb-2 text-center">
+            <h6 class="text-danger">Don't have a user? Register now:</h6>
+            <div class="col-xs-4 col-sm-4"></div>
+            <div class="col-4">
+                <button class="btn btn-primary" id="registerBtn">Register</button>
+            </div>
+            <div class="col-xs-4 col-sm-4"></div>
+        </div>
+    </div>
+
+    <div id="successfullLoginSection" class="d-none text-center mt-3 mb-2">
+        <h2 class="text-center text-success">Logged in successfully!</h2>
+        <a href="home.html">
+            <button class="btn btn-primary mt-2" id="homeBtn">Go to home page</button>
+        </a>
+    </div>
+
+    <div id="registerSection" class="d-none">
+        <div class="row">
+            <h1 class="text-center text-info mb-3 mt-2">Register</h1>
+            <h5 class="text-center text-secondary mb-3">Enter an email address and password to register</h5>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-4"></div>
+            <div class="col-sm-8 col-xs-10">
+                <form id="registerForm">
+                    <div class="mb-3 row">
+                        <div class="col-6">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                            <div class="text-danger">Email address should be valid. (for example: mail@mail.com)</div>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="col-6">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                            <div class="text-danger">Password should be at least 6 characters</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Register</button>
+                </form>
+            </div>
+            <div class="col-xs-1 col-sm-4"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+
+</body>
+</html>
